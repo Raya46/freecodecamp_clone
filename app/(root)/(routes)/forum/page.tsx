@@ -44,7 +44,7 @@ const Forum = () => {
           </div>
         </div>
         <div className="flex gap-8 w-full">
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-20">
             <div className="flex justify-between py-4">
               <p>Subforum</p>
               <p>Topics</p>
@@ -61,7 +61,7 @@ const Forum = () => {
             ))}
             <div className="border-b-2 border-b-gray-600"></div>
           </div>
-          <div className="flex w-full flex-col ">
+          <div className="flex w-full flex-col mb-10">
             <div className="flex py-4 ">
               <p>Latest</p>
             </div>
@@ -77,7 +77,7 @@ const Forum = () => {
                 />
               ))}
 
-              <div className="flex w-full justify-end">
+              <div className="flex w-full justify-end ">
                 <button className="flex border-2 items-center p-2 px-3">
                   More
                 </button>

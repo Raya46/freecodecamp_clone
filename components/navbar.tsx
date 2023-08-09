@@ -201,7 +201,9 @@ export const Navbar = () => {
               </div>
             </div>
             <button className="border border-[#FEAC32] bg-[#FFBC3F] h-full py-1 px-3">
-              <p className="text-black">Sign in</p>
+              <Link href="/sign-in" className="text-black">
+                Sign in
+              </Link>
             </button>
           </div>
         </div>
