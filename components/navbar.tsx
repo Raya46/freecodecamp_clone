@@ -9,7 +9,7 @@ import Link from "next/link";
 export const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
   return (
-    <div className="flex w-full">
+    <div className="flex w-full fixed mx-auto top-0 z-50">
       <div className="flex w-full justify-between bg-[#0A0A23] px-3 py-1">
         <div className="flex w-1/2 items-center relative">
           <svg

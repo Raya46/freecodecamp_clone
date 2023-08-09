@@ -3,7 +3,7 @@ import dataCourse from "@/components/dummy-data/dummyCourses";
 
 const Curriculum = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-20">
       <div className="flex flex-col justify-center items-center gap-10 mt-10 text-white">
         <div className="flex">
           <p className="text-2xl mb-5">Welcome to freeCodeCamp's curriculum.</p>

@@ -4,11 +4,13 @@ import React from "react";
 
 const LayoutRoot = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="h-full">
-      <Navbar />
+    <>
+      <div className="fixed w-full mx-auto top-0 z-50">
+        <Navbar />
+      </div>
       {children}
       <Footer />
-    </div>
+    </>
   );
 };
 

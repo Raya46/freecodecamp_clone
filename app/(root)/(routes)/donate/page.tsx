@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const DonatePage = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-10">
       <div className="flex flex-col p-10 ">
         <div className="flex gap-4">
           <div className="flex flex-col gap-4 text-white">
