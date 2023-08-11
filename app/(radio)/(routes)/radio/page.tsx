@@ -1,4 +1,9 @@
+"use client";
+
+import { useState } from "react";
+
 const Radio = () => {
+  const [play, setPlay] = useState(false);
   return (
     <div className="bg-[#0A0A23] w-full h-full">
       <div className="flex justify-center text-xl text-white mb-4">
@@ -37,13 +42,24 @@ const Radio = () => {
                 </g>
               </svg>
             </div>
+
             <div className="flex gap-4">
-              <svg viewBox="0 0 100 100" className="fill-white w-[25px]">
-                <polygon
-                  points="-6.04047,17.1511 81.8903,58.1985 -3.90024,104.196"
-                  transform="matrix(0.999729, 0.023281, -0.023281, 0.999729, 7.39321, -10.0425)"
-                ></polygon>
-              </svg>
+              <div className="flex flex-col justify-end items-end">
+                <p>Listeners: 44</p>
+                <p>input</p>
+              </div>
+              <button onClick={() => setPlay(!play)}>
+                {play ? (
+                  <h1>pause</h1>
+                ) : (
+                  <svg viewBox="0 0 100 100" className="fill-white w-[25px]">
+                    <polygon
+                      points="-6.04047,17.1511 81.8903,58.1985 -3.90024,104.196"
+                      transform="matrix(0.999729, 0.023281, -0.023281, 0.999729, 7.39321, -10.0425)"
+                    ></polygon>
+                  </svg>
+                )}
+              </button>
               <input type="range" max={100} min={0} step={5} value={0} />
             </div>
           </div>
