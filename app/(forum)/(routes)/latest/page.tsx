@@ -7,7 +7,6 @@ const Latest = () => {
   return (
     <div className="container mx-auto">
       <div className="flex flex-col justify-center mx-20 mt-5">
-        {/* <HeaderForum /> */}
         <div className="flex gap-8 w-full">
           <div className="flex flex-col mb-20 w-full">
             <div className="flex justify-between py-4 w-full">
