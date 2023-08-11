@@ -1,7 +1,7 @@
-import dummyForumCourses from "@/components/dummy-data/dummyForumCourses";
-import CardForumCourses from "@/components/cardForum/cardForumCourses";
-import dummyForumLatest from "@/components/dummy-data/dummyForumLatest";
-import CardForumLatest from "@/components/cardForum/cardForumLatest";
+import Image from "next/image";
+import person from "@/assets/person2.png";
+import dummyLatests from "@/components/dummy-data/dummyLatest";
+import CardLatest from "@/components/cardLatest";
 
 const Latest = () => {
   return (
@@ -9,25 +9,28 @@ const Latest = () => {
       <div className="flex flex-col justify-center mx-20 mt-5">
         {/* <HeaderForum /> */}
         <div className="flex gap-8 w-full">
-          <div className="flex flex-col mb-20">
-            <div className="flex justify-between py-4">
+          <div className="flex flex-col mb-20 w-full">
+            <div className="flex justify-between py-4 w-full">
               <p>Topic</p>
-              <div className="flex">
+              <div className="flex gap-[3.3rem]">
                 <p>Replies</p>
                 <p>Views</p>
                 <p>Activity</p>
               </div>
             </div>
-            {dummyForumCourses.map((forumCourse, index) => (
-              <CardForumCourses
-                key={index}
-                title={forumCourse.title}
-                createdAt={forumCourse.createdAt}
-                participant={forumCourse.participant}
-                desc={forumCourse.desc}
-                borderColor={forumCourse.borderColor}
-              />
-            ))}
+            <div className="flex flex-col">
+              {dummyLatests.map((dummyLatest, index) => (
+                <CardLatest
+                  key={index}
+                  title={dummyLatest.title}
+                  tag={dummyLatest.tag}
+                  images={dummyLatest.images}
+                  replies={dummyLatest.replies}
+                  views={dummyLatest.views}
+                  activity={dummyLatest.activity}
+                />
+              ))}
+            </div>
             <div className="border-b-2 border-b-gray-600"></div>
           </div>
         </div>
