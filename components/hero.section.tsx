@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import landingfcc from "@/assets/landingfcc.png";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -132,13 +133,14 @@ const HeroSection = () => {
           </g>
         </svg>
       </div>
-      <div className="flex justify-center items-center h-full w-full">
-        <button className="border-4 border-[#FEAC32] bg-[#FFBC3F] h-full py-3 w-[30rem]">
+      <div className="flex justify-center items-center h-full w-full mb-20">
+        <Link
+          href="/sign-in"
+          className="border-4 border-[#FEAC32] bg-[#FFBC3F] h-full py-3 w-[30rem] flex items-center justify-center"
+        >
           <p className="text-black text-xl">Get started (it's free)</p>
-        </button>
+        </Link>
       </div>
-      <br />
-      <br />
       <div className="flex flex-col justify-center items-center">
         <Image src={landingfcc} alt="none" className="w-[750px] h-[442px]" />
         <p className="py-3">

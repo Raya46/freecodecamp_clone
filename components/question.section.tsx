@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const QuestionSection = () => {
   return (
     <div className="flex flex-col gap-6 mt-14 text-white">
@@ -78,10 +80,13 @@ const QuestionSection = () => {
       <div className="flex flex-col font-bold text-xl mt-5 text-white">
         Happy coding!
       </div>
-      <div className="flex justify-center items-center w-full my-7">
-        <button className="border-4 border-[#FEAC32] bg-[#FFBC3F] h-full py-2 w-[30rem]">
+      <div className="flex justify-center items-center h-full w-full mb-10">
+        <Link
+          href="/sign-in"
+          className="border-4 border-[#FEAC32] bg-[#FFBC3F] h-full py-3 w-[30rem] flex items-center justify-center"
+        >
           <p className="text-black text-xl">Get started (it's free)</p>
-        </button>
+        </Link>
       </div>
     </div>
   );

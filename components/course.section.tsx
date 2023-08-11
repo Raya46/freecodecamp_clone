@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CardQuestion from "./cardquestion";
 import dataCourse from "@/components/dummy-data/dummyCourses";
 
@@ -15,6 +16,14 @@ const CourseSection = () => {
             text={course.text}
           />
         ))}
+      </div>
+      <div className="flex justify-center items-center h-full w-full">
+        <Link
+          href="/sign-in"
+          className="border-4 border-[#FEAC32] bg-[#FFBC3F] h-full py-3 w-[30rem] flex items-center justify-center"
+        >
+          <p className="text-black text-xl">Get started (it's free)</p>
+        </Link>
       </div>
     </div>
   );
