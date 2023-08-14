@@ -18,26 +18,25 @@ const CardTop = ({
   return (
     <div className="flex w-full flex-col border-t-gray-600 border-t-2">
       <div className="flex w-full justify-between py-4">
-        <div className="flex w-full">
+        <div className="flex w-full justify-between">
           <div className="flex w-full flex-col ml-4 ">
             <p>{title}</p>
             <p>{tag}</p>
           </div>
-          <div className="w-full">
+          <div className="flex w-full items-center justify-end mr-10 gap-2">
             {images.map((image, index) => (
               <Image
                 key={index}
                 src={image}
                 alt="none"
-                className="w-8 h-8 border"
+                className="w-6 h-6 border"
               />
             ))}
           </div>
         </div>
-        <div className="flex w-full flex-col justify-center items-center"></div>
-        <div className="flex w-1/2 items-center justify-center">
-          <p className="w-full">{replies.toString()} </p>
-          <p className="w-full">{views.toString()}</p>
+        <div className="flex w-1/4 items-center justify-center ">
+          <p className="w-full text-[#F77816]">{replies.toString()} </p>
+          <p className="w-full text-[#CF7721]">{views.toString()}k</p>
           <p className="w-full">{activity}</p>
         </div>
       </div>
