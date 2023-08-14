@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 
-const CardLatest = ({
+const CardTop = ({
   title,
   tag,
   images,
@@ -18,12 +18,12 @@ const CardLatest = ({
   return (
     <div className="flex w-full flex-col border-t-gray-600 border-t-2">
       <div className="flex w-full justify-between py-4">
-        <div className="flex w-full flex-col ml-4 ">
-          <p>{title}</p>
-          <p>{tag}</p>
-        </div>
-        <div className="flex w-full flex-col justify-center items-center">
-          <div className="flex w-full flex-row gap-2 justify-center items-center">
+        <div className="flex w-full">
+          <div className="flex w-full flex-col ml-4 ">
+            <p>{title}</p>
+            <p>{tag}</p>
+          </div>
+          <div className="w-full">
             {images.map((image, index) => (
               <Image
                 key={index}
@@ -34,6 +34,7 @@ const CardLatest = ({
             ))}
           </div>
         </div>
+        <div className="flex w-full flex-col justify-center items-center"></div>
         <div className="flex w-1/2 items-center justify-center">
           <p className="w-full">{replies.toString()} </p>
           <p className="w-full">{views.toString()}</p>
@@ -44,4 +45,4 @@ const CardLatest = ({
   );
 };
 
-export default CardLatest;
+export default CardTop;
