@@ -55,7 +55,7 @@ const Curriculum = () => {
           </p>
         </Link>
       </div>
-      <div className="flex flex-col gap-3 mx-60 mb-24">
+      {/* <div className="flex flex-col gap-3 mx-60 mb-24">
         {dataCourse.map((course, index) => (
           <CardQuestion
             key={index}
@@ -63,7 +63,7 @@ const Curriculum = () => {
             text={course.text}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

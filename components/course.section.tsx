@@ -14,6 +14,7 @@ const CourseSection = () => {
             key={index}
             logoLeft={course.logoLeft}
             text={course.text}
+            permalink={course.permalink}
           />
         ))}
       </div>

@@ -14,6 +14,7 @@ const dataCourse = [
       </svg>
     ),
     text: "Responsive Web Design Certification",
+    permalink: "responsive-web-design",
   },
   {
     logoLeft: (
@@ -28,6 +29,7 @@ const dataCourse = [
       </svg>
     ),
     text: "JavaScript Algorithms and Data Structures Certification",
+    permalink: "javascript-algorithms-and-data-structures",
   },
   {
     logoLeft: (
@@ -42,6 +44,7 @@ const dataCourse = [
       </svg>
     ),
     text: "Front End Development Libraries Certification",
+    permalink: "front-end-development-libraries-certification",
   },
   {
     logoLeft: (
@@ -56,6 +59,7 @@ const dataCourse = [
       </svg>
     ),
     text: "Data Visualization Certification",
+    permalink: "data-visualization-certification",
   },
   {
     logoLeft: (
@@ -70,6 +74,7 @@ const dataCourse = [
       </svg>
     ),
     text: "Relational Database Certification",
+    permalink: "relational-database-certification",
   },
   {
     logoLeft: (
@@ -84,6 +89,7 @@ const dataCourse = [
       </svg>
     ),
     text: "Back End Development and APIs Certification",
+    permalink: "back-end-development-and-apis-certification",
   },
   {
     logoLeft: (
@@ -98,6 +104,7 @@ const dataCourse = [
       </svg>
     ),
     text: "Quality Assurance Certification",
+    permalink: "quality-assurance-certification",
   },
   {
     logoLeft: (
@@ -112,6 +119,7 @@ const dataCourse = [
       </svg>
     ),
     text: "Scientific Computing with Python Certification",
+    permalink: "scientific-computing-with-python-certification",
   },
   {
     logoLeft: (
@@ -126,6 +134,7 @@ const dataCourse = [
       </svg>
     ),
     text: "Data Analysis with Python Certification",
+    permalink: "data-analysis-with-python-certification",
   },
   {
     logoLeft: (
@@ -140,6 +149,7 @@ const dataCourse = [
       </svg>
     ),
     text: "Information Security Certification",
+    permalink: "information-security-certification",
   },
   {
     logoLeft: (
@@ -154,6 +164,7 @@ const dataCourse = [
       </svg>
     ),
     text: "Machine Learning with Python Certification",
+    permalink: "machine-learning-with-python-certification",
   },
   {
     logoLeft: (
@@ -168,6 +179,7 @@ const dataCourse = [
       </svg>
     ),
     text: "College Algebra with Python Certification",
+    permalink: "college-algebra-with-python-certification",
   },
   {
     logoLeft: (
@@ -182,6 +194,7 @@ const dataCourse = [
       </svg>
     ),
     text: "Coding Interview Prep",
+    permalink: "coding-interview-prep",
   },
   {
     logoLeft: (
@@ -196,6 +209,7 @@ const dataCourse = [
       </svg>
     ),
     text: "Project Euler",
+    permalink: "project-euler",
   },
   {
     logoLeft: (
@@ -209,7 +223,8 @@ const dataCourse = [
         <path d="M112 48h352v48h48V32a32.09 32.09 0 00-32-32H96a32.09 32.09 0 00-32 32v256H16a16 16 0 00-16 16v16a64.14 64.14 0 0063.91 64H352v-96H112zm492 80H420a36 36 0 00-36 36v312a36 36 0 0036 36h184a36 36 0 0036-36V164a36 36 0 00-36-36zm-12 336H432V176h160z"></path>
       </svg>
     ),
-    text: "Legacy Responsive Web Design Certification",
+    text: "Legacy Responsive Web Design challenges",
+    permalink: "legacy-responsive-web-design-challenges",
   },
 ];
 

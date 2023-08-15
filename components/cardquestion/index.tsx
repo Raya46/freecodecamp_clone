@@ -1,14 +1,17 @@
+import Link from "next/link";
 import React from "react";
 
 const CardQuestion = ({
   text,
   logoLeft,
+  permalink,
 }: {
   text: string;
   logoLeft: JSX.Element;
+  permalink: string;
 }): JSX.Element => {
   return (
-    <div className="group">
+    <Link href={permalink} className="group">
       <div className="flex cursor-pointer group-hover:bg-[#F5F6F7] bg-[#3B3B4F] border-[#F5F6F7] border-2 p-4 items-center justify-between">
         <div className="flex items-center gap-4 fill-white group-hover:fill-[#3B3B4F]">
           {logoLeft}
@@ -31,7 +34,7 @@ const CardQuestion = ({
           </g>
         </svg>
       </div>
-    </div>
+    </Link>
   );
 };
 
