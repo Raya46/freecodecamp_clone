@@ -22,12 +22,7 @@ const CardQuestionDonate: React.FC<CardQuestionProps> = ({ text, desc }) => {
     >
       <div className="flex gap-3">
         {expanded ? (
-          <svg viewBox="0 0 100 100" width="25px">
-            <polygon
-              points="-6.04047,17.1511 81.8903,58.1985 -3.90024,104.196"
-              transform="matrix(0.999729, 0.023281, -0.023281, 0.999729, 7.39321, -10.0425)"
-            ></polygon>
-          </svg>
+          <div className="text-2xl">▼</div>
         ) : (
           <svg viewBox="0 0 100 100" className="fill-white w-[25px]">
             <polygon

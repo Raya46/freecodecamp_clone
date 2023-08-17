@@ -1,5 +1,3 @@
-import CardQuestion from "@/components/cardquestion";
-import dataCourse from "@/components/dummy-data/dummyCourses";
 import Link from "next/link";
 
 const Curriculum = () => {
