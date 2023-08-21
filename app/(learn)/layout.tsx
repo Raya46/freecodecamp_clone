@@ -2,6 +2,7 @@ import CardQuestion from "@/components/cardquestion";
 import dataCourse from "@/components/dummy-data/dummyCourses";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import Link from "next/link";
 import React from "react";
 
 const LayoutLearn = ({ children }: { children: React.ReactNode }) => {
@@ -11,7 +12,23 @@ const LayoutLearn = ({ children }: { children: React.ReactNode }) => {
         <Navbar />
       </div>
       <div className="mt-20">{children}</div>
-      <div className="flex flex-col gap-3 mx-60 mb-24">
+      <div className="flex flex-col gap-3 mx-[18.9rem] mb-24">
+        <div className="flex flex-col justify-center items-center mb-10 mt-32">
+          <Link
+            href="/sign-in"
+            className="border-4 border-[#FEAC32] bg-[#FFBC3F] h-full py-3 w-[30rem] flex items-center justify-center"
+          >
+            <p className="text-black text-xl">
+              Sign in to save your progress (it's free)
+            </p>
+          </Link>
+          <div className="flex text-3xl justify-center items-center mt-10">
+            Browse our other free certifications
+          </div>
+          <div className="flex text-3xl justify-center items-center">
+            (we recommend doing these in order)
+          </div>
+        </div>
         {dataCourse.map((course, index) => (
           <CardQuestion
             key={index}
