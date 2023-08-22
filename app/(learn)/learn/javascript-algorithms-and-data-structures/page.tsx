@@ -1,5 +1,6 @@
 import CardDescJS from "@/components/cardDropdownLearn/cardDescJS";
 import CardDropdownLearnJS from "@/components/cardDropdownLearn/cardDropdownLearnJS";
+import dummyLearnJSs from "@/components/dummy-data/dummyLearnJS";
 
 const JavascriptAlgorithm = () => {
   return (
@@ -43,7 +44,20 @@ const JavascriptAlgorithm = () => {
         </div>
         <div className="flex text-4xl font-bold mt-20 mb-10">Courses</div>
         <div className="flex flex-col gap-1 w-full">
-          <CardDescJS />
+          <CardDescJS
+            title="Basic JavaScript"
+            desc1="JavaScript is a scripting language you can use to make web pages interactive. It is one of the core technologies of the web, along with HTML and CSS, and is supported by all modern browsers."
+            desc2="In this course, you'll learn fundamental programming concepts in JavaScript. You'll start with basic data structures like numbers and strings. Then you'll learn to work with arrays, objects, functions, loops, if/else statements, and more."
+            desc3=""
+          />
+          <CardDropdownLearnJS />
+          <div className="flex py-3 w-full"></div>
+          <CardDescJS
+            title="ES6"
+            desc1="ECMAScript, or ES, is a standardized version of JavaScript. Because all major browsers follow this specification, the terms ECMAScript and JavaScript are interchangeable."
+            desc2="Most of the JavaScript you've learned up to this point was in ES5 (ECMAScript 5), which was finalized in 2009. While you can still write programs in ES5, JavaScript is constantly evolving, and new features are released every year."
+            desc3="ES6, released in 2015, added many powerful new features to the language. In this course, you'll learn these new features, including arrow functions, destructuring, classes, promises, and modules."
+          />
           <CardDropdownLearnJS />
         </div>
       </div>

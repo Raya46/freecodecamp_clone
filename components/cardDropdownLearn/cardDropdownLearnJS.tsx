@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import CardLiLearnJS from "./cardLiLearnJS";
+import dummyLearnJSs from "../dummy-data/dummyLearnJS";
 
 const CardDropdownLearnJS = () => {
   const [expanded, setExpanded] = useState(false);
@@ -11,11 +13,11 @@ const CardDropdownLearnJS = () => {
   };
   return (
     <div
-      className="flex flex-col bg-[#0A0A23] cursor-pointer p-4"
+      className="flex flex-col bg-[#0A0A23] cursor-pointer p-2"
       onClick={handleCardClick}
     >
-      <div className="flex justify-between">
-        <div className="flex gap-2">
+      <div className="flex justify-between hover:bg-gray-600 p-2">
+        <div className="flex gap-2 ">
           {expanded ? (
             <div className="text-lg">▼</div>
           ) : (
@@ -34,12 +36,13 @@ const CardDropdownLearnJS = () => {
         </div>
       </div>
       <div
-        className={`w-full text-white mt-5  ${
-          expanded ? "flex gap-2" : "hidden"
+        className={`w-full text-white mt-2 ${
+          expanded ? "flex flex-col gap-2" : "hidden"
         }`}
       >
-        <input type="radio" />
-        <p>tes</p>
+        {dummyLearnJSs.map((learnJS, index) => (
+          <CardLiLearnJS course={learnJS.course} key={index} />
+        ))}
       </div>
     </div>
   );
