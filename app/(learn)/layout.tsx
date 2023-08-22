@@ -16,9 +16,9 @@ const LayoutLearn = ({ children }: { children: React.ReactNode }) => {
         <div className="flex flex-col justify-center items-center mb-10 mt-32">
           <Link
             href="/sign-in"
-            className="border-4 border-[#FEAC32] bg-[#FFBC3F] h-full py-3 w-[30rem] flex items-center justify-center"
+            className="border-4 border-[#FEAC32] bg-[#FFBC3F] h-full py-2 w-[30rem] flex items-center justify-center"
           >
-            <p className="text-black text-xl">
+            <p className="text-black text-2xl">
               Sign in to save your progress (it's free)
             </p>
           </Link>

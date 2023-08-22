@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col mx-64 mt-24">
+    <div className="flex flex-col mx-64 mt-28">
       <div className="flex flex-col gap-10 text-white">
         <h2 className="text-5xl">Learn to code - for free</h2>
         <h2 className="text-5xl">Build projects.</h2>

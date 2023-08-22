@@ -1,10 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import CardLiLearnJS from "./cardLiLearnJS";
-import dummyLearnJSs from "../dummy-data/dummyLearnJS";
 
-const CardDropdownLearnJS = () => {
+const CardDropdownLearnJS = ({
+  children,
+  passed,
+}: {
+  children: JSX.Element[];
+  passed: string;
+}) => {
   const [expanded, setExpanded] = useState(false);
 
   const handleCardClick = () => {
@@ -32,17 +36,16 @@ const CardDropdownLearnJS = () => {
         </div>
         <div className="flex justify-center items-center gap-2">
           <input type="radio" />
-          <p>0/113</p>
+          <p>0/{passed}</p>
         </div>
       </div>
+
       <div
         className={`w-full text-white mt-2 ${
           expanded ? "flex flex-col gap-2" : "hidden"
         }`}
       >
-        {dummyLearnJSs.map((learnJS, index) => (
-          <CardLiLearnJS course={learnJS.course} key={index} />
-        ))}
+        {children}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 const CardCertiLearn = () => {
   return (
-    <div className="flex flex-col bg-[#0A0A23] p-4">
+    <div className="flex flex-col bg-[#0A0A23] p-4 hover:bg-[#2A2A40] cursor-pointer">
       <div className="flex bg-[#002EAD] text-[#99C9FF] w-1/4 justify-center p-2 ml-3">
         Certification Project
       </div>
