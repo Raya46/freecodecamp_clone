@@ -504,7 +504,7 @@ const dummyLearTes = {
       },
     ],
   },
-  "javascript-algorithm-and-data-structures": {
+  "javascript-algorithms-and-data-structures": {
     data: [
       {
         title1: "JavaScript Algorithms and",

@@ -102,7 +102,7 @@ export const Navbar = () => {
                     Donate
                   </div>
                 </Link>
-                <Link href="/curriculum">
+                <Link href="/learn">
                   <div className="p-3 bg-[#0A0A23] hover:bg-[#D0D0CD] hover:text-black">
                     Curriculum
                   </div>

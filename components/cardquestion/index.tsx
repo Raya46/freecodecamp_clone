@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const CardQuestion = ({
   text,
@@ -10,8 +13,13 @@ const CardQuestion = ({
   logoLeft: JSX.Element;
   permalink: string;
 }): JSX.Element => {
+  const router = useRouter();
+
+  const navigateToSlug = (slug: string) => {
+    router.push(`/learn/${slug}`);
+  };
   return (
-    <Link href={permalink} className="group">
+    <div onClick={() => navigateToSlug(permalink)} className="group">
       <div className="flex cursor-pointer group-hover:bg-[#F5F6F7] bg-[#3B3B4F] border-[#F5F6F7] border-2 p-4 items-center justify-between">
         <div className="flex items-center gap-4 fill-white group-hover:fill-[#3B3B4F]">
           {logoLeft}
@@ -34,7 +42,7 @@ const CardQuestion = ({
           </g>
         </svg>
       </div>
-    </Link>
+    </div>
   );
 };
 
