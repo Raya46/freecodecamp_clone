@@ -1,3 +1,5 @@
+import CardQuestion from "@/components/cardquestion";
+import dataCourse from "@/components/dummy-data/dummyCourses";
 import Link from "next/link";
 
 const Curriculum = () => {
@@ -43,25 +45,6 @@ const Curriculum = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-center items-center h-full w-full my-10">
-        <Link
-          href="/sign-in"
-          className="border-4 border-[#FEAC32] bg-[#FFBC3F] h-full py-3 w-[30rem] flex items-center justify-center"
-        >
-          <p className="text-black text-xl">
-            Sign in to save your progress (it's free)
-          </p>
-        </Link>
-      </div>
-      {/* <div className="flex flex-col gap-3 mx-60 mb-24">
-        {dataCourse.map((course, index) => (
-          <CardQuestion
-            key={index}
-            logoLeft={course.logoLeft}
-            text={course.text}
-          />
-        ))}
-      </div> */}
     </div>
   );
 };

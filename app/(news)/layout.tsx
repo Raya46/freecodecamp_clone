@@ -1,4 +1,4 @@
-import { Footer } from "@/components/footer";
+import { FooterLearn } from "@/components/footerLearn";
 import { Navbar } from "@/components/navbar";
 import React from "react";
 
@@ -9,7 +9,7 @@ const LayoutNews = ({ children }: { children: React.ReactNode }) => {
         <Navbar />
       </div>
       {children}
-      <Footer />
+      <FooterLearn />
     </>
   );
 };

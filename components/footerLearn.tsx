@@ -1,18 +1,12 @@
-"use client";
+import Link from "next/link";
 import React from "react";
 import dummyFooterLists from "./dummy-data/dummyFooterList";
 import dummyFooterLists2 from "./dummy-data/dummyFooterList2";
 import dummyFooterLists3 from "./dummy-data/dummyFooterList3";
-import { useRouter } from "next/navigation";
 
-export const Footer = () => {
-  const router = useRouter();
-
-  const navigateToSlug = (slug: string) => {
-    router.push(`/news/${slug}`);
-  };
+export const FooterLearn = () => {
   return (
-    <footer className="flex flex-col bg-[#2A2A40] text-white w-full">
+    <footer className="flex flex-col bg-[#EEEEF0] text-[#2A2A40] w-full">
       <div className="flex gap-10 pl-10 py-16 w-full">
         <div className="flex flex-col gap-10 w-[1050px] text-sm">
           <p>
@@ -40,34 +34,37 @@ export const Footer = () => {
         <div className="flex flex-col gap-4 w-full">
           <div className="flex justify-center w-full">Trending Guides</div>
           <div className="flex justify-center w-full">
-            <div className="flex flex-col w-full text-sm text-[#D0D0CD] gap-3 ">
+            <div className="flex flex-col w-full text-sm text-[#2A2A40] gap-3 ">
               {dummyFooterLists.map((fl, index) => (
-                <li
-                  onClick={() => navigateToSlug(fl.permalink)}
-                  className="hover:underline cursor-pointer list-none"
+                <Link
+                  key={index}
+                  href={fl.permalink}
+                  className="hover:underline"
                 >
                   {fl.li}
-                </li>
+                </Link>
               ))}
             </div>
-            <div className="flex flex-col w-full text-sm text-[#D0D0CD] gap-3">
+            <div className="flex flex-col w-full text-sm text-[#2A2A40] gap-3">
               {dummyFooterLists2.map((fl, index) => (
-                <li
-                  onClick={() => navigateToSlug(fl.permalink)}
-                  className="hover:underline cursor-pointer list-none"
+                <Link
+                  key={index}
+                  href={fl.permalink}
+                  className="hover:underline"
                 >
                   {fl.li}
-                </li>
+                </Link>
               ))}
             </div>
-            <div className="flex flex-col w-full text-sm text-[#D0D0CD] gap-3">
+            <div className="flex flex-col w-full text-sm text-[#2A2A40] gap-3">
               {dummyFooterLists3.map((fl, index) => (
-                <li
-                  onClick={() => navigateToSlug(fl.permalink)}
-                  className="hover:underline cursor-pointer list-none"
+                <Link
+                  key={index}
+                  href={fl.permalink}
+                  className="hover:underline"
                 >
                   {fl.li}
-                </li>
+                </Link>
               ))}
             </div>
           </div>

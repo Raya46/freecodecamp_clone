@@ -14,7 +14,7 @@ interface PageContentProps {
 }
 
 const PageContent = ({ data }: PageContentProps) => (
-  <div className="flex flex-col justify-center items-center mt-[5.4rem] w-full">
+  <div className="flex flex-col justify-center items-center mt-[5.4rem] w-full text-[#2A2A40]">
     {data.map((fl, index) => (
       <div key={index} className="w-full">
         <p>
