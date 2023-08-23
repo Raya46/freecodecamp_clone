@@ -10,7 +10,7 @@ const Latest = () => {
             <div className="flex justify-between py-4 w-full px-4">
               <p className="w-full">Topic</p>
               <div className="flex w-1/4">
-                <p className="w-full">Replies</p>
+                <p className="w-full mr-4">Replies</p>
                 <p className="w-full">Views</p>
                 <p className="w-full">Activity</p>
               </div>

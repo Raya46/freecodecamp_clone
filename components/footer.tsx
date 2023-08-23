@@ -1,4 +1,8 @@
+import Link from "next/link";
 import React from "react";
+import dummyFooterLists from "./dummy-data/dummyFooterList";
+import dummyFooterLists2 from "./dummy-data/dummyFooterList2";
+import dummyFooterLists3 from "./dummy-data/dummyFooterList3";
 
 export const Footer = () => {
   return (
@@ -31,100 +35,19 @@ export const Footer = () => {
           <div className="flex justify-center w-full">Trending Guides</div>
           <div className="flex justify-center w-full">
             <div className="flex flex-col w-full text-sm text-[#D0D0CD] gap-3">
-              <a href="" className="hover:underline">
-                Bash If Statement
-              </a>
-              <a href="" className="hover:underline">
-                Tableau vs Power BI
-              </a>
-              <a href="" className="hover:underline">
-                How to Open XML Files
-              </a>
-              <a href="" className="hover:underline">
-                Python String Contains
-              </a>
-              <a href="" className="hover:underline">
-                SQL Select
-              </a>
-              <a href="" className="hover:underline">
-                What is YAML?
-              </a>
-              <a href="" className="hover:underline">
-                SQL Date Example
-              </a>
-              <a href="" className="hover:underline">
-                What is Data Analytics?
-              </a>
-              <a href="" className="hover:underline">
-                Convert Int to String C++
-              </a>
-              <a href="" className="hover:underline">
-                Stratified Random Sampling
-              </a>
+              {dummyFooterLists.map((fl, index) => (
+                <Link href={fl.permalink}>{fl.li}</Link>
+              ))}
             </div>
             <div className="flex flex-col w-full text-sm text-[#D0D0CD] gap-3">
-              <a href="" className="hover:underline">
-                Align Text in HTML
-              </a>
-              <a href="" className="hover:underline">
-                What is rem in CSS
-              </a>
-              <a href="" className="hover:underline">
-                What's Node Used For?
-              </a>
-              <a href="" className="hover:underline">
-                CS vs IT
-              </a>
-              <a href="" className="hover:underline">
-                PHP Explode
-              </a>
-              <a href="" className="hover:underline">
-                What is an ORM?
-              </a>
-              <a href="" className="hover:underline">
-                Javascript Minify
-              </a>
-              <a href="" className="hover:underline">
-                Git Revert to Last Commit
-              </a>
-              <a href="" className="hover:underline">
-                Data Analyst vs Scientist
-              </a>
-              <a href="" className="hover:underline">
-                Linux Enviroment Variables
-              </a>
+              {dummyFooterLists2.map((fl, index) => (
+                <Link href={fl.permalink}>{fl.li}</Link>
+              ))}
             </div>
             <div className="flex flex-col w-full text-sm text-[#D0D0CD] gap-3">
-              <a href="" className="hover:underline">
-                JS Copy an Object
-              </a>
-              <a href="" className="hover:underline">
-                Quick Sort Algorithm
-              </a>
-              <a href="" className="hover:underline">
-                Declare an Array in JS
-              </a>
-              <a href="" className="hover:underline">
-                JS Append
-              </a>
-              <a href="" className="hover:underline">
-                PHP Implode
-              </a>
-              <a href="" className="hover:underline">
-                SOLID Principles
-              </a>
-              <a href="" className="hover:underline">
-                Append String in Python
-              </a>
-              <a href="" className="hover:underline">
-                What is an IDE in Coding?
-              </a>
-              <a href="" className="hover:underline">
-                Lowercase a Python String
-              </a>
-              <a href="" className="hover:underline">
-                Which Programming Language?
-              </a>
+              {dummyFooterLists3.map((fl, index) => (
+                <Link href={fl.permalink}>{fl.li}</Link>
+              ))}
             </div>
           </div>
         </div>

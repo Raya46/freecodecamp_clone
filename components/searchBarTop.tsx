@@ -6,7 +6,7 @@ const SearchBarTop = () => {
   return (
     <>
       <div
-        className="flex gap-2 cursor-pointer hover:bg-white w-[32%] text-xl"
+        className="flex gap-2 cursor-pointer hover:bg-white max-w-fit text-xl"
         onClick={() => setshowSearchTop(!showSearchTop)}
       >
         <span className="text-white">Year</span>

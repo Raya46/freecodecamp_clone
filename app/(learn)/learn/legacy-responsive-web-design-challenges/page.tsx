@@ -8,12 +8,12 @@ const LegacyResponsiveChallenge = () => {
   return (
     <div className="container mx-auto">
       <div className="flex flex-col justify-center items-center mx-[16.7rem]">
-        <div className="bg-[#D9EDF7] text-blue-500 text-lg p-5 mt-5">
+        <div className="bg-[#D9EDF7] text-blue-900 text-lg p-5 mt-5">
           These courses are no longer part of the certification path, but are
-          still available for you to further your learning.
+          still available for you to further your learning.{" "}
           <u>Go to the current version of the curriculum. </u>
         </div>
-        <div className="flex text-5xl font-bold mt-5">
+        <div className="flex text-5xl font-bold mt-6">
           Legacy Responsive Web
         </div>
         <div className="flex text-5xl font-bold mt-2">Design Challenges</div>
@@ -38,6 +38,11 @@ const LegacyResponsiveChallenge = () => {
           CSS. Later, you'll learn modern techniques like CSS variables by
           building a penguin, and best practices for accessibility by building a
           quiz site.
+        </div>
+        <div className="bg-[#D9EDF7] text-blue-900 text-lg p-5 mt-5">
+          These courses are no longer part of the certification path, but are
+          still available for you to further your learning.{" "}
+          <u>Go to the current version of the curriculum. </u>
         </div>
 
         <div className="flex text-4xl font-bold mt-20 mb-10">Courses</div>

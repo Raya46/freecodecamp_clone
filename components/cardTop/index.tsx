@@ -21,7 +21,7 @@ const CardTop = ({
         <div className="flex w-full justify-between">
           <div className="flex w-full flex-col ml-4 ">
             <p>{title}</p>
-            <p>{tag}</p>
+            <p className="bg-red-400 text-black max-w-fit px-1">{tag}</p>
           </div>
           <div className="flex w-full items-center justify-end mr-10 gap-2">
             {images.map((image, index) => (
@@ -35,8 +35,8 @@ const CardTop = ({
           </div>
         </div>
         <div className="flex w-1/4 items-center justify-center ">
-          <p className="w-full text-[#F77816]">{replies.toString()} </p>
-          <p className="w-full text-[#CF7721]">{views.toString()}k</p>
+          <p className="w-full text-[#F77816] ml-4">{replies.toString()} </p>
+          <p className="w-full text-[#CF7721] text-left">{views.toString()}k</p>
           <p className="w-full">{activity}</p>
         </div>
       </div>
