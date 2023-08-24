@@ -1,9 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import gambar from "@/assets/newsImage.png";
+import Image from "next/image";
 
 const Radio = () => {
   const [play, setPlay] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const togglePlay = () => {
+    setPlay(!play);
+    if (audioRef.current) {
+      if (play) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+    }
+  };
+
   return (
     <div className="bg-[#0A0A23] w-full h-full">
       <div className="flex justify-center text-xl text-white mb-4">
@@ -27,10 +42,10 @@ const Radio = () => {
           <hr />
           <hr />
           <hr />
-          <div className="flex bg-[#0A0A23] justify-between mt-4 mx-4">
-            <div className="flex">
+          <div className="flex bg-[#0A0A23] justify-between mx-4 max-h-fit ">
+            <div className="flex justify-center items-center gap-4 w-full">
               <svg
-                className="w-8 h-8"
+                className="w-8"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="#fff"
                 version="1.1"
@@ -41,26 +56,64 @@ const Radio = () => {
                   <path d="M166.112,108.111h-52.051V51.249c0-4.142-3.357-7.5-7.5-7.5c-4.142,0-7.5,3.358-7.5,7.5v64.362c0,4.142,3.358,7.5,7.5,7.5   h59.551c4.143,0,7.5-3.358,7.5-7.5C173.612,111.469,170.254,108.111,166.112,108.111z" />
                 </g>
               </svg>
+              <div className="flex w-full gap-2">
+                <Image
+                  src={gambar}
+                  alt="none"
+                  className="object-cover max-w-fit w-1/6"
+                />
+                <div className="flex flex-col w-full">
+                  <div className="flex text-sm">
+                    Life inside a nightmare rectangle
+                  </div>
+                  <div className="flex text-sm">Dotlights</div>
+                  <div className="flex text-sm">Chillop daydreams</div>
+                  <div className="flex mt-10"></div>
+                  <hr />
+                </div>
+              </div>
             </div>
 
             <div className="flex gap-4">
-              <div className="flex flex-col justify-end items-end">
-                <p>Listeners: 44</p>
-                <p>input</p>
-              </div>
-              <button onClick={() => setPlay(!play)}>
+              {play ? (
+                <div className="absolute flex flex-col items-end right-60">
+                  <p>Listeners: 44</p>
+                  <select
+                    className="text-black"
+                    aria-label="Select Stream"
+                    data-meta="stream-select"
+                    id="stream-select"
+                  >
+                    <option value="/radio.mp3">
+                      <p className="text-black">/radio.mp3 (128kbps MP3)</p>
+                    </option>
+                    <option value="64kbps">
+                      <p className="text-black"> 64kbps MP3</p>
+                    </option>
+                  </select>
+                </div>
+              ) : (
+                <></>
+              )}
+              <button onClick={togglePlay}>
                 {play ? (
-                  <h1>pause</h1>
+                  <h1 className="text-6xl">⏸</h1>
                 ) : (
-                  <svg viewBox="0 0 100 100" className="fill-white w-[25px]">
-                    <polygon
-                      points="-6.04047,17.1511 81.8903,58.1985 -3.90024,104.196"
-                      transform="matrix(0.999729, 0.023281, -0.023281, 0.999729, 7.39321, -10.0425)"
-                    ></polygon>
-                  </svg>
+                  <h1 className="text-6xl">▶</h1>
                 )}
               </button>
-              <input type="range" max={100} min={0} step={5} value={0} />
+              <audio ref={audioRef} controls={false}>
+                <source src="/music/short.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+              <input
+                type="range"
+                max={100}
+                min={0}
+                step={5}
+                value={0}
+                onChange={() => console.log("tes")}
+              />
             </div>
           </div>
         </footer>
