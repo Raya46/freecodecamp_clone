@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import CardCreator from "@/components/cardcreator";
 import dataCreator from "@/components/dummy-data/dummyCreator";
@@ -11,6 +12,7 @@ const CreatorSection = () => {
       <div className="flex flex-col p-10 gap-16">
         {dataCreator.map((creator, index) => (
           <CardCreator
+            key={index}
             image={creator.image}
             name={creator.name}
             place={creator.place}

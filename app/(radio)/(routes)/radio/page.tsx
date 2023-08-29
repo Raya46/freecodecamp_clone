@@ -69,7 +69,7 @@ const Radio = () => {
                   <div className="flex text-sm">Dotlights</div>
                   <div className="flex text-sm">Chillop daydreams</div>
                   <div className="flex mt-10"></div>
-                  <hr />
+                  {play ? <hr /> : <></>}
                 </div>
               </div>
             </div>

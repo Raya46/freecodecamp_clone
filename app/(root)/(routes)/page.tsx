@@ -5,7 +5,7 @@ import CreatorSection from "@/components/creator.section";
 import CourseSection from "@/components/course.section";
 import QuestionSection from "@/components/question.section";
 
-const RootPage = ({ children }: { children: React.ReactNode }) => {
+const RootPage = () => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col justify-center items-center">

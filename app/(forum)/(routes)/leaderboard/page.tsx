@@ -26,8 +26,8 @@ const LeaderBoard = () => {
             <div className="flex justify-between py-4 w-full border-b border-white">
               <p>Username</p>
               <div className="flex gap-[3.3rem]">
-                <p>❤ Received</p>
-                <p>❤ Given</p>
+                <p className="text-red-500">❤ Received</p>
+                <p className="text-red-500">❤ Given</p>
                 <p>Replies Posted</p>
                 <p>Posts Read</p>
                 <p>Days Visited</p>

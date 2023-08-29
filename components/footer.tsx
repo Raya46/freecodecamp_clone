@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import dummyFooterLists from "./dummy-data/dummyFooterList";
 import dummyFooterLists2 from "./dummy-data/dummyFooterList2";
 import dummyFooterLists3 from "./dummy-data/dummyFooterList3";
@@ -43,6 +42,7 @@ export const Footer = () => {
             <div className="flex flex-col w-full text-sm text-[#D0D0CD] gap-3 ">
               {dummyFooterLists.map((fl, index) => (
                 <li
+                  key={index}
                   onClick={() => navigateToSlug(fl.permalink)}
                   className="hover:underline cursor-pointer list-none"
                 >
@@ -53,6 +53,7 @@ export const Footer = () => {
             <div className="flex flex-col w-full text-sm text-[#D0D0CD] gap-3">
               {dummyFooterLists2.map((fl, index) => (
                 <li
+                  key={index}
                   onClick={() => navigateToSlug(fl.permalink)}
                   className="hover:underline cursor-pointer list-none"
                 >
@@ -63,6 +64,7 @@ export const Footer = () => {
             <div className="flex flex-col w-full text-sm text-[#D0D0CD] gap-3">
               {dummyFooterLists3.map((fl, index) => (
                 <li
+                  key={index}
                   onClick={() => navigateToSlug(fl.permalink)}
                   className="hover:underline cursor-pointer list-none"
                 >

@@ -1,9 +1,8 @@
+"use client";
+
 import CardDescJS from "../cardDropdownLearn/cardDescJS";
 import CardDropdownLearnJS from "../cardDropdownLearn/cardDropdownLearnJS";
 import CardLiLearnJS from "../cardDropdownLearn/cardLiLearnJS";
-import dummyDataVisualization from "../dummy-data/dummyDataVisualization";
-import dummyFrontEndLibraries from "../dummy-data/dummyFronEndLibraries";
-import dummyFrontEndjQuerys from "../dummy-data/dummyFrontEndjQuery";
 
 interface PageContentProps {
   data: {

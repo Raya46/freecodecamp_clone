@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import gambar from "@/assets/logo-nav.png";
 import React from "react";

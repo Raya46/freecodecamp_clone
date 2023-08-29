@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import CardQuestion from "./cardquestion";
 import dataCourse from "@/components/dummy-data/dummyCourses";

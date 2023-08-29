@@ -1,9 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: 'Inter';
+    src: url('/path-to-your-local-font/inter.woff2') format('woff2');
+    /* Include additional font formats for cross-browser compatibility */
+    /* e.g., src: url('/path-to-your-local-font/inter.woff') format('woff'); */
+    font-weight: normal;
+    font-style: normal;
+  }
 
 body, html {
     height: 100%;
     background-color: #1B1B32;
     color: #D0D0CD;
+    font-family: 'Inter', sans-serif;
 }
+

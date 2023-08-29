@@ -1,10 +1,16 @@
-import Link from "next/link";
+"use client";
 import React from "react";
 import dummyFooterLists from "./dummy-data/dummyFooterList";
 import dummyFooterLists2 from "./dummy-data/dummyFooterList2";
 import dummyFooterLists3 from "./dummy-data/dummyFooterList3";
+import { useRouter } from "next/navigation";
 
 export const FooterLearn = () => {
+  const router = useRouter();
+
+  const navigateToSlug = (slug: string) => {
+    router.push(`/news/${slug}`);
+  };
   return (
     <footer className="flex flex-col bg-[#EEEEF0] text-[#2A2A40] w-full">
       <div className="flex gap-10 pl-10 py-16 w-full">
@@ -36,35 +42,32 @@ export const FooterLearn = () => {
           <div className="flex justify-center w-full">
             <div className="flex flex-col w-full text-sm text-[#2A2A40] gap-3 ">
               {dummyFooterLists.map((fl, index) => (
-                <Link
-                  key={index}
-                  href={fl.permalink}
-                  className="hover:underline"
+                <li
+                  onClick={() => navigateToSlug(fl.permalink)}
+                  className="hover:underline cursor-pointer list-none"
                 >
                   {fl.li}
-                </Link>
+                </li>
               ))}
             </div>
             <div className="flex flex-col w-full text-sm text-[#2A2A40] gap-3">
               {dummyFooterLists2.map((fl, index) => (
-                <Link
-                  key={index}
-                  href={fl.permalink}
-                  className="hover:underline"
+                <li
+                  onClick={() => navigateToSlug(fl.permalink)}
+                  className="hover:underline cursor-pointer list-none"
                 >
                   {fl.li}
-                </Link>
+                </li>
               ))}
             </div>
             <div className="flex flex-col w-full text-sm text-[#2A2A40] gap-3">
               {dummyFooterLists3.map((fl, index) => (
-                <Link
-                  key={index}
-                  href={fl.permalink}
-                  className="hover:underline"
+                <li
+                  onClick={() => navigateToSlug(fl.permalink)}
+                  className="hover:underline cursor-pointer list-none"
                 >
                   {fl.li}
-                </Link>
+                </li>
               ))}
             </div>
           </div>

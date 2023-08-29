@@ -1,3 +1,5 @@
+"use client";
+
 const CardDescJS = ({
   title,
   desc1,

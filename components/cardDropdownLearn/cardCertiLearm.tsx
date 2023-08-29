@@ -1,3 +1,5 @@
+"use client";
+
 const CardCertiLearn = () => {
   return (
     <div className="flex flex-col bg-[#0A0A23] p-4 hover:bg-[#2A2A40] cursor-pointer">
