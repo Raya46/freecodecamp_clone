@@ -1,3 +1,4 @@
+import NotFoundPage from "@/app/not-found";
 import dummyLearTes from "@/components/dummy-data/dummyLearnTes";
 import PageContent from "@/components/reusablePage/reus2";
 import PageReuse from "@/components/reusablePage/reus3";
@@ -11,6 +12,7 @@ const page: FC<pageProps> = ({ params }) => {
   console.log(params.slug);
   const { slug } = params;
   const postData = dummyLearTes[slug as keyof typeof dummyLearTes];
+  if (!postData) return <NotFoundPage />;
   return (
     <div className="container mx-auto w-full">
       {slug === "college-algebra-with-python-certification" ||

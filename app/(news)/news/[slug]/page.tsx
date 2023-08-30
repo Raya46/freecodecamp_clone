@@ -3,14 +3,18 @@ import PageContent from "@/components/reusablePage/reus";
 import Image from "next/image";
 import { FC } from "react";
 
-interface pageProps {
+interface PageProps {
   params: { slug: string };
 }
 
-const page: FC<pageProps> = ({ params }) => {
-  console.log(params.slug);
+const Page: FC<PageProps> = ({ params }) => {
   const { slug } = params;
   const postData = dummyNewsData[slug as keyof typeof dummyNewsData];
+
+  // if (!dummyNewsData[]) {
+  //   return <p>Not Found</p>;
+  // }
+
   return (
     <div className="bg-white">
       <div className="bg-[#002EAD] fixed top-10 w-full flex justify-center h-12 items-center text-white">
@@ -27,4 +31,4 @@ const page: FC<pageProps> = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;

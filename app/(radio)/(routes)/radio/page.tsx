@@ -69,7 +69,11 @@ const Radio = () => {
                   <div className="flex text-sm">Dotlights</div>
                   <div className="flex text-sm">Chillop daydreams</div>
                   <div className="flex mt-10"></div>
-                  {play ? <hr /> : <></>}
+                  {play ? (
+                    <div className="flex bg-white p-2 rounded-full"></div>
+                  ) : (
+                    <></>
+                  )}
                 </div>
               </div>
             </div>
